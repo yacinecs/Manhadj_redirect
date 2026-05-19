@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhaj An Noubouwah</title>
+  <style>
+    :root {
+      --ink: #0f1f1a;
+      --green-900: #0f3d2e;
+      --green-700: #1b5e20;
+      --green-500: #3a8f3b;
+      --mint-200: #cfe9d5;
+      --sand-50: #f7f4ee;
+      --gold-500: #c49a3a;
+      --card: #ffffff;
+      --shadow: 0 12px 30px rgba(15, 31, 26, 0.12);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #e7f3ea 0%, transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, #f2ecd9 0%, transparent 55%),
+        linear-gradient(180deg, #fdfcf9 0%, var(--sand-50) 60%, #f1efe9 100%);
+      min-height: 100vh;
+      font-family: "Manrope", "Segoe UI", Tahoma, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 56px 24px 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .brand {
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: 12px;
+      animation: floatIn 900ms ease-out;
+    }
+
+    .title {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--green-900);
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 16px;
+      color: #395548;
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      animation: liftIn 800ms ease-out 120ms both;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 2px solid var(--green-700);
+      background: #fff;
+      color: var(--green-700);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--green-700);
+      color: #fff;
+    }
+
+    .button.primary {
+      background: var(--green-700);
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: var(--green-900);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #5a6f66;
+    }
+
+    .meta span {
+      padding: 6px 10px;
+      background: #f0f6f2;
+      border-radius: 999px;
+      border: 1px solid #e0ebe3;
+    }
+
+    .footer {
+      margin-top: auto;
+      padding: 22px 18px;
+      text-align: center;
+      color: #e9efe9;
+      background: linear-gradient(180deg, #12402f 0%, #0f2f23 100%);
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px 0 6px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      color: #e9efe9;
+      text-decoration: none;
+      border: 1px solid rgba(233, 239, 233, 0.25);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      transition: background 160ms ease;
+    }
+
+    .socials a:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .fallback {
+      display: none;
+    }
+
+    @keyframes floatIn {
+      from { transform: translateY(12px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes liftIn {
+      from { transform: translateY(10px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (min-width: 860px) {
+      .hero { grid-template-columns: 1.1fr 0.9fr; }
+      .brand { justify-items: start; text-align: left; }
+      .meta { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero fallback">
+    <section class="brand">
+      <img src="assets/logo.jpg" alt="Manhaj An Noubouwah" class="logo">
+      <h1 class="title">Manhaj An Noubouwah</h1>
+      <p class="subtitle">
+        Accedez directement au cours et a l'audio partage depuis l'application.
+      </p>
+      <div class="meta">
+        <span>Redirection rapide</span>
+        <span>Audio direct</span>
+        <span>Gratuit</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="buttons">
+        <a id="appLink" class="button primary" href="manbw://course/1">
+          Ouvrir dans l'application
+        </a>
+        <a id="playLink" class="button" href="https://play.google.com/store/apps/details?id=com.manbw">
+          Installer sur Android
+        </a>
+        <a id="shareLink" class="button" href="https://twitter.com/intent/tweet?text=Decouvrez%20ce%20cours%20sur%20Manhaj%20An%20Noubouwah">
+          Partager
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fallback">
+    <div>Suivez-nous</div>
+    <div class="socials">
+      <a href="https://facebook.com">Facebook</a>
+      <a href="https://youtube.com">YouTube</a>
+      <a href="https://telegram.org">Telegram</a>
+      <a href="https://twitter.com">Twitter</a>
+    </div>
+    <div style="font-size: 12px; opacity: 0.7;">
+      © 2026 Manhadj An Noubouwah. Tous droits reserves.
+    </div>
+  </footer>
+
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const courseId = params.get("id") || "1";
+      const audioId = params.get("audioId");
+
+      let appUrl = `manbw://course/${courseId}`;
+      if (audioId) {
+        appUrl = `manbw://audio/${courseId}/${audioId}`;
+      }
+
+      const appLink = document.getElementById("appLink");
+      appLink.href = appUrl;
+
+      // Optional: update share link to include current URL
+      const shareLink = document.getElementById("shareLink");
+      shareLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent("Decouvrez ce cours sur Manhaj An Noubouwah")}&url=${encodeURIComponent(location.href)}`;
+
+      // Attempt to open the app
+      window.location = appUrl;
+
+      // Show fallback UI after a short delay
+      setTimeout(function () {
+        document.querySelectorAll(".fallback").forEach(function (el) {
+          el.style.display = "block";
+        });
+      }, 1800);
+    };
+  </script>
+</body>
+</html>
